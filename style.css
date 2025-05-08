@@ -1,5 +1,13 @@
+h1, h2 {
+    text-align: center;
+    color: #ffd606; /* rojo Pokéball */
+    text-shadow: 2px 2px 0 #0404f6;
+}
+
 body {
+
     font-family: Arial, sans-serif;
+    background-color: #e60012;
 
 }
 
@@ -12,6 +20,9 @@ th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
+}
+tr:hover {
+    background-color: #f0f8ff;
 }
 
 #formAgregar {
@@ -28,7 +39,10 @@ th, td {
     width: 200px;
 }
 
+
 #formAgregar div {
     display: flex;
     flex-direction: column;
 }
+
+

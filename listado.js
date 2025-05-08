@@ -83,8 +83,15 @@ function modificarUltimoPokemon() {
 // =================== ESCUCHAR FORMULARIO DE AGREGAR ===================
 
 document.getElementById('formAgregar').addEventListener('submit', agregarNuevoPokemonUsuario);
-
+/*
 // =================== AL CARGAR LA PÁGINA ===================
 
 obtenerPokemonesAPI(mostrarPokemonEnTabla);
 mostrarPokemonesUsuario();
+*/
+obtenerPokemonesAPI(mostrarPokemonEnTabla);
+
+// Esperar 500ms antes de mostrar los del usuario (da tiempo a que cargue la API)
+setTimeout(() => {
+    mostrarPokemonesUsuario();
+}, 500);
