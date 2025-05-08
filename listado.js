@@ -37,10 +37,8 @@ function eliminarUltimoPokemon() {
     }
 }
 
-// =================== ESCUCHAR FORMULARIO DE AGREGAR ===================
-
-document.getElementById('formAgregar').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevenir que recargue la página
+function agregarNuevoPokemonUsuario(event) {
+    event.preventDefault(); // Prevenir que recargue la página
 
     const nombre = document.getElementById('nombre').value;
     const altura = document.getElementById('altura').value;
@@ -59,7 +57,32 @@ document.getElementById('formAgregar').addEventListener('submit', function (e) {
 
     // Limpiar el formulario
     document.getElementById('formAgregar').reset();
-});
+}
+
+function modificarUltimoPokemon() {
+    let pokemonesUsuario = obtenerPokemonesUsuario();
+    if (pokemonesUsuario.length > 0) {
+        const nombre = document.getElementById('nombre').value;
+        const altura = document.getElementById('altura').value;
+        const peso = document.getElementById('peso').value;
+        const tipo = document.getElementById('tipo').value;
+
+        if (nombre && altura && peso && tipo) {
+            pokemonesUsuario[pokemonesUsuario.length - 1] = { nombre, altura, peso, tipo };
+            guardarPokemonesUsuario(pokemonesUsuario);
+            alert('Último Pokémon modificado.');
+            location.reload();
+        } else {
+            alert('Por favor, completa todos los campos del formulario antes de modificar.');
+        }
+    } else {
+        alert('No hay Pokémon del usuario para modificar.');
+    }
+}
+
+// =================== ESCUCHAR FORMULARIO DE AGREGAR ===================
+
+document.getElementById('formAgregar').addEventListener('submit', agregarNuevoPokemonUsuario);
 
 // =================== AL CARGAR LA PÁGINA ===================
 
