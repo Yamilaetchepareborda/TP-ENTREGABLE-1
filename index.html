@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PoKeDeX</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPokemones">
+            <!-- Aquí se insertarán los Pokémon -->
+        </tbody>
+    </table>
+
+    <br>
+    <button onclick="eliminarUltimoPokemon()">Eliminar último Pokémon agregado por el usuario</button>
+
+    <hr>
+
+    <h2>Agregar nuevo Pokémon</h2>
+
+    <form id="formAgregar">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+
+        <div>
+            <label>Altura:</label>
+            <input type="number" id="altura" required>
+        </div>
+
+        <div>
+            <label>Peso:</label>
+            <input type="number" id="peso" required>
+        </div>
+
+        <div>
+            <label>Tipo:</label>
+            <input type="text" id="tipo" required>
+        </div>
+
+        <div>
+            <button type="submit">ADD</button>
+        </div>
+    </form>
+
+    <!-- Scripts -->
+    <script src="datos.js"></script>
+    <script src="api.js"></script>
+    <script src="listado.js"></script>
+</body>
+</html>

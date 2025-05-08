@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#formAgregar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#formAgregar label {
+    width: 100%;
+}
+
+#formAgregar input {
+    width: 200px;
+}
+
+#formAgregar div {
+    display: flex;
+    flex-direction: column;
+}
