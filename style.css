@@ -1,7 +1,44 @@
-h1, h2 {
+h1,
+h2 {
     text-align: center;
-    color: #ffd606; /* rojo Pokéball */
+    color: #ffd606;
+    /* rojo Pokéball */
     text-shadow: 2px 2px 0 #0404f6;
+}
+
+#table-head {
+    background-color: gray;
+    color: #ffd606;
+}
+
+.box {
+    color: #ffd606;
+    background-color: grey;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#tablaPokemones {
+    background-color: lightyellow;
+}
+
+.buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: grey;
+    color: #ffd606;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+
+
 }
 
 body {
@@ -16,11 +53,17 @@ table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
 }
+
+#pc{
+    background-color: transparent;
+}
+
 tr:hover {
     background-color: #f0f8ff;
 }
@@ -44,5 +87,3 @@ tr:hover {
     display: flex;
     flex-direction: column;
 }
-
-
